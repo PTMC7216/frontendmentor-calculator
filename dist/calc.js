@@ -1,7 +1,7 @@
 "use strict";
 const display = document.querySelector(".display");
 const keys = document.querySelectorAll(".key");
-const sanitize = (x) => x.replace(/[^\d/*+-.]/g, '');
+const sanitize = (x) => x.replace("x", "*").replace(/[^\d/*+-.]/g, '');
 const error = () => display.innerText === "ERROR" || display.innerText === "undefined";
 let flag = false;
 keys.forEach(key => {
@@ -29,6 +29,7 @@ keys.forEach(key => {
             case "+":
             case "-":
             case "x":
+            case '/':
                 flag = false;
                 if (error()) {
                     display.innerText = key.textContent;

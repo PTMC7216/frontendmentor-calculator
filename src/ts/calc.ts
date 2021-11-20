@@ -1,8 +1,8 @@
 const display = document.querySelector(".display") as HTMLDivElement;
 const keys = document.querySelectorAll(".key");
 
-const sanitize = (x: string): string => x.replace(/[^\d/*+-.]/g, '');
-const error = () => display.innerText === "ERROR" || display.innerText === "undefined";
+const sanitize = (x: string): string => x.replace("x", "*").replace(/[^\d/*+-.]/g, '');
+const error = (): boolean => display.innerText === "ERROR" || display.innerText === "undefined";
 
 let flag: boolean = false;
 
@@ -29,7 +29,7 @@ keys.forEach(key => {
                 } catch { display.innerText = "ERROR"; }
                 break;
 
-            case "+": case "-": case "x":
+            case "+": case "-": case "x": case '/':
                 flag = false;
                 if (error()) {
                     display.innerText = key.textContent;
