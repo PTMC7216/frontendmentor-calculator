@@ -1,0 +1,222 @@
+:root {
+  font-family: "Spartan", sans-serif;
+}
+
+.theme-1 {
+  --bg-primary: hsl(222, 26%, 31%);
+  --bg-secondary: hsl(223, 31%, 20%);
+  --bg-tertiary: hsl(224, 36%, 15%);
+  --key-bg-primary: hsl(225, 21%, 49%);
+  --key-shadow-primary: hsl(224, 28%, 35%);
+  --key-bg-secondary: hsl(6, 63%, 50%);
+  --key-shadow-secondary: hsl(6, 70%, 34%);
+  --key-bg-tertiary: hsl(30, 25%, 89%);
+  --key-shadow-tertiary: hsl(28, 16%, 65%);
+  --symbol-primary: hsl(221, 14%, 31%);
+  --symbol-secondary: hsl(0, 0, 100%);
+  --symbol-tertiary: hsl(0, 0, 100%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(221, 14%, 31%);
+}
+
+.theme-2 {
+  --bg-primary: hsl(0, 0%, 90%);
+  --bg-secondary: hsl(0, 5%, 81%);
+  --bg-tertiary: hsl(0, 0%, 93%);
+  --key-bg-primary: hsl(185, 42%, 37%);
+  --key-shadow-primary: hsl(185, 58%, 25%);
+  --key-bg-secondary: hsl(25, 98%, 40%);
+  --key-shadow-secondary: hsl(25, 99%, 27%);
+  --key-bg-tertiary: hsl(45, 7%, 89%);
+  --key-shadow-tertiary: hsl(35, 11%, 61%);
+  --symbol-primary: hsl(60, 10%, 19%);
+  --symbol-secondary: hsl(0, 0%, 100%);
+  --symbol-tertiary: hsl(0, 0%, 100%);
+  --text-primary: hsl(60, 10%, 19%);
+  --text-secondary: hsl(0, 0, 100%);
+}
+
+.theme-3 {
+  --bg-primary: hsl(268, 75%, 9%);
+  --bg-secondary: hsl(268, 71%, 12%);
+  --bg-tertiary: hsl(268, 71%, 12%);
+  --key-bg-primary: hsl(281, 89%, 26%);
+  --key-shadow-primary: hsl(285, 91%, 52%);
+  --key-bg-secondary: hsl(176, 100%, 44%);
+  --key-shadow-secondary: hsl(177, 92%, 70%);
+  --key-bg-tertiary: hsl(268, 47%, 21%);
+  --key-shadow-tertiary: hsl(290, 70%, 36%);
+  --symbol-primary: hsl(52, 100%, 62%);
+  --symbol-secondary: hsl(0, 0%, 100%);
+  --symbol-tertiary: hsl(198, 20%, 13%);
+  --text-primary: hsl(52, 100%, 62%);
+  --text-secondary: hsl(198, 20%, 13%);
+}
+
+body {
+  display: flex;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+.flex--titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+.flex--display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--bg-tertiary);
+  min-height: clamp(5.5rem, 22vw, 7.5rem);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+.grid--keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--bg-secondary);
+  gap: min(3.75vw, 1.5rem);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+main {
+  flex-grow: 1;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+  max-width: 475px;
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--key-bg-secondary);
+}
+
+.title {
+  font-size: clamp(1.5rem, 3.38rem - 5.8vw, 2rem);
+  cursor: default;
+  user-select: none;
+}
+
+.theme {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: auto;
+  grid-template-areas: ". nums" "theme slider";
+  font-size: clamp(0.6rem, 2.16rem - 6vw, 0.8rem);
+  cursor: default;
+  user-select: none;
+}
+.theme__text {
+  grid-area: theme;
+  margin-right: 1.4rem;
+}
+.theme__nums {
+  grid-area: nums;
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin-bottom: 0.4rem;
+  padding-left: 2px;
+}
+.theme__slider {
+  grid-area: slider;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  padding: 0 0.4em;
+  min-width: 5em;
+  min-height: 2em;
+  cursor: pointer;
+}
+.theme__selector {
+  background-color: var(--key-bg-secondary);
+  border-radius: 50%;
+  width: 1.35em;
+  height: 1.35em;
+}
+.theme__slider:hover .theme__selector {
+  opacity: 0.8;
+}
+
+.theme__slider--1 {
+  justify-content: flex-start;
+}
+
+.theme__slider--2 {
+  justify-content: center;
+}
+
+.theme__slider--3 {
+  justify-content: flex-end;
+}
+
+.display {
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin: 0 1.5rem;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--key-bg-tertiary);
+  box-shadow: 0px 4px var(--key-shadow-tertiary);
+  color: var(--symbol-primary);
+  font-size: 2rem;
+  user-select: none;
+  border-radius: min(1.5vw, 9px);
+  padding: 1.1rem 1rem;
+  min-width: 0;
+  height: 1.5rem;
+}
+.key:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.key--span {
+  grid-column: span 2;
+}
+.key--color1 {
+  background-color: var(--key-bg-primary);
+  box-shadow: 0px 4px var(--key-shadow-primary);
+  color: var(--symbol-secondary);
+  font-size: 1rem;
+}
+.key--color2 {
+  background-color: var(--key-bg-secondary);
+  box-shadow: 0px 4px var(--key-shadow-secondary);
+  color: var(--symbol-tertiary);
+  font-size: 1rem;
+}
+.key--shift2 {
+  position: relative;
+  top: 2px;
+}
+.key--shift3 {
+  position: relative;
+  top: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

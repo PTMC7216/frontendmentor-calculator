@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+
+  &--keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--bg-secondary);
+    gap: min(3.75vw, 1.5rem);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+}

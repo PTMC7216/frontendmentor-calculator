@@ -1,0 +1,21 @@
+.flex {
+  display: flex;
+
+  &--titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+  }
+
+  &--display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--bg-tertiary);
+    min-height: clamp(5.5rem, 22vw, 7.5rem);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}

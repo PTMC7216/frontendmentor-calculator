@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <script defer src="theme.js"></script>
+  <script defer src="calc.js"></script>
+</head>
+<body class="theme-1">
+
+  <main>
+
+    <div class="flex flex--titlebar">
+      <div class="title">calc</div>
+      <div class="theme">
+        <div class="theme__text">THEME</div>
+        <div class="theme__nums"><span>1</span><span>2</span><span>3</span></div>
+        <div class="theme__slider theme__slider--1">
+          <div class="theme__selector"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex--display">
+      <div class="display"></div>
+    </div>
+
+    <div class="grid grid--keypad">
+      <div class="key"><span class="key--shift3">7</span></div>
+      <div class="key"><span class="key--shift3">8</span></div>
+      <div class="key"><span class="key--shift3">9</span></div>
+      <div class="key key--color1"><span class="key--shift2">DEL</span></div>
+      <div class="key"><span class="key--shift3">4</span></div>
+      <div class="key"><span class="key--shift3">5</span></div>
+      <div class="key"><span class="key--shift3">6</span></div>
+      <div class="key"><span class="key--shift3">+</span></div>
+      <div class="key"><span class="key--shift3">1</span></div>
+      <div class="key"><span class="key--shift3">2</span></div>
+      <div class="key"><span class="key--shift3">3</span></div>
+      <div class="key"><span>-</span></div>
+      <div class="key"><span class="key--shift3">.</span></div>
+      <div class="key"><span class="key--shift3">0</span></div>
+      <div class="key"><span class="key--shift3">/</span></div>
+      <div class="key"><span class="key--shift2">x</span></div>
+      <div class="key key--span key--color1"><span class="key--shift2">RESET</span></div>
+      <div class="key key--span key--color2"><span class="key--shift2">=</span></div>
+    </div>
+    
+    <footer class="attribution">
+      Challenge by <a class="attribution__a" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="attribution__a" href="#">PTMC7216</a>.
+    </footer>
+  
+  </main>
+    
+</body>
+</html>
