@@ -1,7 +1,7 @@
 const display = document.querySelector(".display") as HTMLDivElement;
 const keys = document.querySelectorAll(".key");
 
-const sanitize = (x: string): string => x.replace(/[^-()\d/*+.]/g, '');
+const sanitize = (x: string): string => x.replace(/[^\d/*+-.]/g, '');
 const error = () => display.innerText === "ERROR" || display.innerText === "undefined";
 
 let flag: boolean = false;
