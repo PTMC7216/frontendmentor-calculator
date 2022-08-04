@@ -15,9 +15,9 @@ Users should be able to:
 
 ### Solution screenshots
 
-<img src="./src/design/mobile-solution.png">
-
-<img src="./src/design/desktop-solution.png">
+Mobile | Desktop
+:----: | :----:
+<img src="./src/design/mobile-solution.png" height="310"> | <img src="./src/design/desktop-solution.png" height="310">
 
 
 ### Links
